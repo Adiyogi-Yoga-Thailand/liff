@@ -1,7 +1,11 @@
-import type { Component } from "solid-js"
+import { Routes, Route } from "@solidjs/router"
 
-const App: Component = () => {
-  return <p class="text-4xl text-green-700 text-center py-20">Hello tailwind!</p>
-}
+import Home from "./Home"
+import Register from "./Register"
 
-export default App
+export default () => (
+  <Routes>
+    <Route path="/" component={Home} />
+    <Route path="/register" component={Register} />
+  </Routes>
+)
