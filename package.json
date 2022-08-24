@@ -27,6 +27,7 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "@line/liff": "^2.21.0",
     "@solidjs/router": "^0.4.2",
     "daisyui": "^2.24.0",
     "solid-js": "^1.4.7"
