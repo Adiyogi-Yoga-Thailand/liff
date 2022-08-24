@@ -1,9 +1,17 @@
-import type { Component } from 'solid-js';
+import liff from "@line/liff"
+import { Routes, Route } from "@solidjs/router"
 
-const App: Component = () => {
+import Home from "./Home"
+import Register from "./Register"
+
+export default async () => {
+  await liff.init({
+    liffId: process.env.LIFF_ID, // Use own liffId
+  })
   return (
-    <p class="text-4xl text-green-700 text-center py-20">Hello tailwind!</p>
-  );
-};
-
-export default App;
+    <Routes>
+      <Route path="/" component={Home} />
+      <Route path="/register" component={Register} />
+    </Routes>
+  )
+}

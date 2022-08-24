@@ -1,7 +1,7 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "liff",
+  "version": "0.1.0",
+  "description": "Adiyogi Yoga Thailand LIFF Application",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,14 +9,27 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^18.7.11",
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
+    "@typescript-eslint/parser": "^5.34.0",
     "autoprefixer": "^10.4.7",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.6",
-    "typescript": "^4.7.4",
+    "typescript": "*",
     "vite": "^3.0.0",
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "@line/liff": "^2.21.0",
+    "@solidjs/router": "^0.4.2",
+    "daisyui": "^2.24.0",
     "solid-js": "^1.4.7"
   }
 }
