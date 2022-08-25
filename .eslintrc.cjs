@@ -1,13 +1,14 @@
 module.exports = {
   env: {
     browser: true,
-    es2022: true,
+    es2021: true,
+    node: true,
   },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "standard-with-typescript",
+    // "standard-with-typescript",
     "prettier",
   ],
   overrides: [],
@@ -17,9 +18,6 @@ module.exports = {
     sourceType: "module",
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
   plugins: ["@typescript-eslint"],
   root: true,
