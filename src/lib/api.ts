@@ -1,15 +1,14 @@
 import ky, { KyResponse } from "ky"
 
 const val = {
-  HOST: `${window.location.protocol}://${window.location.hostname}`,
+  FUCTIONS_PATH: ".netlify/functions/",
   EDGE_FUCTIONS: {
-    FUCTIONS_PATH: "/.netlify/functions",
-    getLiffId: "/edge/getLiffId",
+    getLiffId: "edge/getLiffId",
   },
 }
 
-async function callApiFunction<T>(endpint: string): Promise<[KyResponse, T]> {
-  const response = await ky.get(val.HOST + val.EDGE_FUCTIONS.FUCTIONS_PATH + endpint)
+async function callApiFunction<T>(endpint: string, edge = true): Promise<[KyResponse, T]> {
+  const response = await ky.get((edge ? "" : val.FUCTIONS_PATH) + endpint)
   if (response.ok) {
     return [response, await response.json<T>()]
   } else {
