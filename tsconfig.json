@@ -8,6 +8,7 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
+    // "strictNullChecks": true,
     "target": "ESNext",
     "types": ["vite/client"]
   }
